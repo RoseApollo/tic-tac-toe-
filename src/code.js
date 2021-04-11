@@ -1,21 +1,26 @@
-var board = 
-[
+var board;
+
+function load()
+{
+    board = 
     [
-        [0, document.getElementById("id00")],
-        [0, document.getElementById("id01")],
-        [0, document.getElementById("id02")]
-    ],
-    [
-        [0, document.getElementById("id10")],
-        [0, document.getElementById("id11")],
-        [0, document.getElementById("id12")]
-    ],
-    [
-        [0, document.getElementById("id20")],
-        [0, document.getElementById("id21")],
-        [0, document.getElementById("id22")]
-    ]
-];
+        [
+            [0, document.getElementById("id00")],
+            [0, document.getElementById("id01")],
+            [0, document.getElementById("id02")]
+        ],
+        [
+            [0, document.getElementById("id10")],
+            [0, document.getElementById("id11")],
+            [0, document.getElementById("id12")]
+        ],
+        [
+            [0, document.getElementById("id20")],
+            [0, document.getElementById("id21")],
+            [0, document.getElementById("id22")]
+        ]
+    ];
+}
 
 var ids =
 {
@@ -49,5 +54,5 @@ function move(id)
         charater = "O"
     }
 
-    board[ids[id] [0]] [ids[id] [1]] [1].innerHTML = charater;
+    board[ids[id][0]][ids[id][1]][1].innerHTML = charater;
 }
