@@ -41,6 +41,11 @@ var ptm = 1;
 
 function move(id)
 {
+    if (board[ids[id][0]][ids[id][1]][0] != 0)
+    {
+        return;
+    }
+    
     var charater = "";
 
     if (ptm == 1)
@@ -57,4 +62,5 @@ function move(id)
     }
 
     board[ids[id][0]][ids[id][1]][1].innerHTML = charater;
+    board[ids[id][0]][ids[id][1]][0] = charater;
 }
