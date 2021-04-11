@@ -35,7 +35,7 @@ var ids =
     '20': [2, 0],
     '21': [2, 1],
     '22': [2, 2]
-}
+};
 
 var ptm = 1;
 
@@ -43,13 +43,17 @@ function move(id)
 {
     var charater = "";
 
-    if (ptm === 1)
+    if (ptm == 1)
     {
-        charater = "X"
+        charater = "X";
+
+        ptm = 2;
     }
-    else (ptm === 2)
+    else
     {
-        charater = "O"
+        charater = "O";
+
+        ptm = 1;
     }
 
     board[ids[id][0]][ids[id][1]][1].innerHTML = charater;
