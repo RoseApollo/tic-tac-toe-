@@ -41,8 +41,6 @@ var ptm = 1;
 
 function move(id)
 {
-    console.log(board[ids[id] [0]] [ids[id] [1]]);
-
     var charater = "";
 
     if (ptm === 1)
