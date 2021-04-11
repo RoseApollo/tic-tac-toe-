@@ -1,19 +1,19 @@
 var board = 
 [
     [
-        [0, document.getElementById("00")],
-        [0, document.getElementById("01")],
-        [0, document.getElementById("02")]
+        [0, document.getElementById("id00")],
+        [0, document.getElementById("id01")],
+        [0, document.getElementById("id02")]
     ],
     [
-        [0, document.getElementById("10")],
-        [0, document.getElementById("11")],
-        [0, document.getElementById("12")]
+        [0, document.getElementById("id10")],
+        [0, document.getElementById("id11")],
+        [0, document.getElementById("id12")]
     ],
     [
-        [0, document.getElementById("20")],
-        [0, document.getElementById("21")],
-        [0, document.getElementById("22")]
+        [0, document.getElementById("id20")],
+        [0, document.getElementById("id21")],
+        [0, document.getElementById("id22")]
     ]
 ];
 
@@ -36,6 +36,8 @@ var ptm = 1;
 
 function move(id)
 {
+    console.log(board[ids[id] [0]] [ids[id] [1]]);
+
     var charater = "";
 
     if (ptm === 1)
