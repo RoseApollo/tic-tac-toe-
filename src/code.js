@@ -47,5 +47,5 @@ function move(id)
         charater = "O"
     }
 
-
+    board[ids[id] [0]] [ids[id] [1]] [1].innerHTML = charater;
 }
