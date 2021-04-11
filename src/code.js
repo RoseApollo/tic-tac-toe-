@@ -63,6 +63,13 @@ function move(id)
 
     board[ids[id][0]][ids[id][1]][1].innerHTML = charater;
     board[ids[id][0]][ids[id][1]][0] = charater;
+
+    var winner = win();
+
+    if (winner != 0)
+    {
+        alert(winner);
+    }
 }
 
 function win()
@@ -95,6 +102,32 @@ function win()
                 {
                     return board[0][y][0];
                 }
+            }
+        }
+    }
+
+    // tr bl line
+
+    if (board[0][0][0] != 0)
+    {
+        if (board[0][0][0] == board[1][1][0])
+        {
+            if (board[1][1][0] == board[2][2][0])
+            {
+                return board[0][0][0];
+            }
+        }
+    }
+
+    // tl br line
+
+    if (board[0][2][0] != 0)
+    {
+        if (board[0][2][0] == board[1][1][0])
+        {
+            if (board[1][1][0] == board[2][0][0])
+            {
+                return board[0][2][0];
             }
         }
     }
