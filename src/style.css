@@ -1,0 +1,14 @@
+#board tr
+{
+    height: 50px;
+}
+
+#board tr th
+{
+    width: 50px;
+}
+
+*
+{
+    text-align: center;
+}
