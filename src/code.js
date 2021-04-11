@@ -64,3 +64,40 @@ function move(id)
     board[ids[id][0]][ids[id][1]][1].innerHTML = charater;
     board[ids[id][0]][ids[id][1]][0] = charater;
 }
+
+function win()
+{
+    // row
+
+    for (var x = 0; x >= 2; x++)
+    {
+        if (board[x][0][0] != 0)
+        {
+            if (board[x][0][0] == board[x][1][0])
+            {
+                if (board[x][1][0] == board[x][2][0])
+                {
+                    return board[x][0][0];
+                }
+            }
+        }
+    }
+
+    // collum
+
+    for (var y = 0; y >= 2; y++)
+    {
+        if (board[0][y][0] != 0)
+        {
+            if (board[0][y][0] == board[1][y][0])
+            {
+                if (board[1][y][0] == board[2][y][0])
+                {
+                    return board[0][y][0];
+                }
+            }
+        }
+    }
+
+    return 0;
+}
