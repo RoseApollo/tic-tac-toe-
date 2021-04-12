@@ -144,7 +144,18 @@ function win()
         }
     }
 
-    return 0;
+    for (var x = 0; x <= 2; x++)
+    {
+        for (var y = 0; y <= 2; y++)
+        {
+            if (board[x][y][0] == 0)
+            {
+                return 0;
+            }
+        }
+    }
+
+    return 3;
 }
 
 function reset()
