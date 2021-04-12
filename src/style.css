@@ -23,6 +23,12 @@ button
     margin-right: auto;
 }
 
+#reset
+{
+    height: 50px;
+    width: 150px;
+}
+
 *
 {
     background-color: black;

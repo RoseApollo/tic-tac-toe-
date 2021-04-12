@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src='./code.js'></script>
+    <script src='./var.js'></script>
 
     <link rel="stylesheet" href="style.css">
 
@@ -52,11 +53,15 @@
                 </table>
             </th>
             <th id='info'>
-                <h2>Score: </h2>
+                <h2 id='score'>0 | 0</h2>
 
                 <br>
                 
-                <h3>X Go</h3>
+                <h3 id='go'>X's Go</h3>
+
+                <br>
+
+                <button onmousedown="reset();" id='reset'>Reset</button>
             </th>
         </tr>
     </table>
