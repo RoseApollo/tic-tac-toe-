@@ -1,17 +1,20 @@
 #board tr
 {
-    height: 50px;
+    height: 100px;
 }
 
 #board tr th
 {
-    width: 50px;
+    width: 100px;
 }
 
 button
 {
-    height: 40px;
-    width: 40px;
+    height: 75px;
+    width: 75px;
+
+    font-size: xx-large;
+    font-style: bold;
 }
 
 *

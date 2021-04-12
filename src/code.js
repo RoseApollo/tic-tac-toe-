@@ -121,7 +121,7 @@ function win()
         {
             if (board[1][1][0] == board[2][2][0])
             {
-                console.log("tr bl: " + board[0][0][0]);
+                console.log("tl br: " + board[0][0][0]);
 
                 return board[0][0][0];
             }
@@ -136,7 +136,7 @@ function win()
         {
             if (board[1][1][0] == board[2][0][0])
             {
-                console.log("tl br: " + board[0][2][0]);
+                console.log("tr bl: " + board[0][2][0]);
 
                 return board[0][2][0];
             }
