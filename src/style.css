@@ -16,11 +16,14 @@
 
 *
 {
-    background-color: #231F20;
-
     color: white;
 
     font-family: 'Roboto', sans-serif;
+}
+
+body
+{
+    background-color: #231F20;
 }
 
 button
@@ -42,4 +45,11 @@ button
 {
     height: 50px;
     width: 150px;
+}
+
+.win
+{
+    border-radius: 12px;
+
+    background-color: #9DB17C;
 }

@@ -32,13 +32,23 @@ function move(id)
             score[winner - 1]++;
 
             info['score'].innerHTML = score[0] + " | " + score[1];
+
+            tabloid.classList.add('win');
+        }
+        else
+        {
+            tabloid.classList.add('lol')
         }
 
         info['go'] = "X's Go";
 
         ptm = 1;
 
-        reset();
+        setTimeout(function ()
+        {
+            reset();
+        }, 1500);
+
         return;
     }
 
@@ -148,4 +158,7 @@ function reset()
             board[x][y][1].innerHTML = " ";
         }
     }
+
+    tabloid.classList.remove('win');
+    tabloid.classList.remove('lol');
 }

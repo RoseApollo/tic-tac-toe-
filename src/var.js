@@ -3,6 +3,7 @@ var info;
 var score;
 var ids;
 var ptm;
+var tabloid;
 
 function load()
 {
@@ -53,4 +54,6 @@ function load()
     };
 
     ptm = 1;
+
+    tabloid = document.getElementById('board');
 }
