@@ -12,38 +12,51 @@
     <title>Tic Tac Toe</title>
 </head>
 <body onload="load();">
-    <table id='board'>
+    <table id='main' class='center'>
         <tr>
             <th>
-                <button onmousedown="move('00');" id='id00'> </button>
+                <table id='board'>
+                    <tr>
+                        <th>
+                            <button onmousedown="move('00');" id='id00'> </button>
+                        </th>
+                        <th>
+                            <button onmousedown="move('01');" id='id01'> </button>
+                        </th>
+                        <th>
+                            <button onmousedown="move('02');" id='id02'> </button>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <button onmousedown="move('10');" id='id10'> </button>
+                        </th>
+                        <th>
+                            <button onmousedown="move('11');" id='id11'> </button>
+                        </th>
+                        <th>
+                            <button onmousedown="move('12');" id='id12'> </button>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <button onmousedown="move('20');" id='id20'> </button>
+                        </th>
+                        <th>
+                            <button onmousedown="move('21');" id='id21'> </button>
+                        </th>
+                        <th>
+                            <button onmousedown="move('22');" id='id22'> </button>
+                        </th>
+                    </tr>
+                </table>
             </th>
-            <th>
-                <button onmousedown="move('01');" id='id01'> </button>
-            </th>
-            <th>
-                <button onmousedown="move('02');" id='id02'> </button>
-            </th>
-        </tr>
-        <tr>
-            <th>
-                <button onmousedown="move('10');" id='id10'> </button>
-            </th>
-            <th>
-                <button onmousedown="move('11');" id='id11'> </button>
-            </th>
-            <th>
-                <button onmousedown="move('12');" id='id12'> </button>
-            </th>
-        </tr>
-        <tr>
-            <th>
-                <button onmousedown="move('20');" id='id20'> </button>
-            </th>
-            <th>
-                <button onmousedown="move('21');" id='id21'> </button>
-            </th>
-            <th>
-                <button onmousedown="move('22');" id='id22'> </button>
+            <th id='info'>
+                <h2>Score: </h2>
+
+                <br>
+                
+                <h3>X Go</h3>
             </th>
         </tr>
     </table>
