@@ -62,7 +62,7 @@ function move(id)
     }
 
     board[ids[id][0]][ids[id][1]][1].innerHTML = charater;
-    board[ids[id][0]][ids[id][1]][0] = charater;
+    board[ids[id][0]][ids[id][1]][0] = ptm;
 
     var winner = win();
 
