@@ -19,12 +19,18 @@
     background-color: #231F20;
 
     color: white;
+
+    font-family: 'Roboto', sans-serif;
 }
 
 button
 {
     height: 75px;
     width: 75px;
+
+    border-radius: 12px;
+
+    border: 0px solid #000000;
 
     font-size: xx-large;
     font-style: bold;
