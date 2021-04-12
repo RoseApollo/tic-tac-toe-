@@ -74,10 +74,13 @@ function move(id)
 
 function win()
 {
+    console.log(board);
+
     // row
 
     for (var x = 0; x >= 2; x++)
     {
+        console.log(x + " : " + board[x][0][0]);
         if (board[x][0][0] != 0)
         {
             if (board[x][0][0] == board[x][1][0])
@@ -141,4 +144,9 @@ function win()
     }
 
     return 0;
+}
+
+function reset()
+{
+
 }
