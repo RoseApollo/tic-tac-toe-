@@ -148,5 +148,13 @@ function win()
 
 function reset()
 {
-
+    var x;
+    for (x = 0; x >= 2; x++)
+    {
+        var y;
+        for (y = 0; y >= 2; y++)
+        {
+            board[x][y][1].innerHTML = " ";
+        }
+    }
 }
