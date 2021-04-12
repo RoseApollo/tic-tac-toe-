@@ -69,6 +69,8 @@ function move(id)
     if (winner != 0)
     {
         alert(winner);
+
+        reset();
     }
 }
 
@@ -78,9 +80,8 @@ function win()
 
     // row
 
-    for (var x = 0; x >= 2; x++)
+    for (var x = 0; x <= 2; x++)
     {
-        console.log(x + " : " + board[x][0][0]);
         if (board[x][0][0] != 0)
         {
             if (board[x][0][0] == board[x][1][0])
@@ -97,7 +98,7 @@ function win()
 
     // collum
 
-    for (var y = 0; y >= 2; y++)
+    for (var y = 0; y <= 2; y++)
     {
         if (board[0][y][0] != 0)
         {
@@ -148,12 +149,11 @@ function win()
 
 function reset()
 {
-    var x;
-    for (x = 0; x >= 2; x++)
+    for (var x = 0; x <= 2; x++)
     {
-        var y;
-        for (y = 0; y >= 2; y++)
+        for (var y = 0; y <= 2; y++)
         {
+            board[x][y][0] = 0;
             board[x][y][1].innerHTML = " ";
         }
     }
