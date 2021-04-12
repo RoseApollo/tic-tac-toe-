@@ -84,6 +84,8 @@ function win()
             {
                 if (board[x][1][0] == board[x][2][0])
                 {
+                    console.log("r: " + board[x][0][0]);
+
                     return board[x][0][0];
                 }
             }
@@ -100,13 +102,15 @@ function win()
             {
                 if (board[1][y][0] == board[2][y][0])
                 {
+                    console.log("c: " + board[0][y][0]);
+
                     return board[0][y][0];
                 }
             }
         }
     }
 
-    // tr bl line
+    // tl br line
 
     if (board[0][0][0] != 0)
     {
@@ -114,12 +118,14 @@ function win()
         {
             if (board[1][1][0] == board[2][2][0])
             {
+                console.log("tr bl: " + board[0][0][0]);
+
                 return board[0][0][0];
             }
         }
     }
 
-    // tl br line
+    // tr bl line
 
     if (board[0][2][0] != 0)
     {
@@ -127,6 +133,8 @@ function win()
         {
             if (board[1][1][0] == board[2][0][0])
             {
+                console.log("tl br: " + board[0][2][0]);
+
                 return board[0][2][0];
             }
         }
