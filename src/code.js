@@ -27,9 +27,13 @@ function move(id)
 
     if (winner != 0)
     {
-        score[winner - 1]++;
+        if (winner != 3)
+        {
+            score[winner - 1]++;
 
-        info['score'].innerHTML = score[0] + " | " + score[1];
+            info['score'].innerHTML = score[0] + " | " + score[1];
+        }
+
         info['go'] = "X's Go";
 
         ptm = 1;
