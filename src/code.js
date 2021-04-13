@@ -6,6 +6,7 @@ function move(id)
     }
     
     var charater = "";
+    var optm = ptm;
 
     if (ptm == 1)
     {
@@ -21,7 +22,7 @@ function move(id)
     }
 
     board[ids[id][0]][ids[id][1]][1].innerHTML = charater;
-    board[ids[id][0]][ids[id][1]][0] = ptm;
+    board[ids[id][0]][ids[id][1]][0] = optm;
 
     var winner = win();
 
