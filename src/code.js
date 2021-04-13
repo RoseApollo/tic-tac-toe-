@@ -156,3 +156,13 @@ function reset()
     tabloid.classList.remove('win');
     tabloid.classList.remove('lol');
 }
+
+function mode(id)
+{
+    if (id != gamemode)
+    {
+        gamemode = id;
+
+        reset();
+    }
+}

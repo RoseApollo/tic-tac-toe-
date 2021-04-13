@@ -4,6 +4,7 @@ var score;
 var ids;
 var ptm;
 var tabloid;
+var gamemode;
 
 function load()
 {
@@ -56,4 +57,6 @@ function load()
     ptm = 1;
 
     tabloid = document.getElementById('board');
+
+    gamemode = 1;
 }
