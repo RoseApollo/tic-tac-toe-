@@ -41,6 +41,11 @@ button
     background-color: #ec5020;
 }
 
+button:hover
+{
+    background-color: #fa6d42;
+}
+
 #reset
 {
     height: 50px;
