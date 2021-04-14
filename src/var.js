@@ -5,6 +5,7 @@ var ids;
 var ptm;
 var tabloid;
 var gamemode;
+var root;
 
 function load()
 {
@@ -59,4 +60,13 @@ function load()
     tabloid = document.getElementById('board');
 
     gamemode = 1;
+
+    root = document.documentElement;
+
+    setup();
+}
+
+function setup()
+{
+    setTheme('orange');
 }

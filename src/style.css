@@ -1,3 +1,11 @@
+:root
+{
+    --theme-back: #000000;
+    --theme-object: #000000;
+    --theme-highlight: #000000;
+    --theme-text: #000000;
+}
+
 #board tr
 {
     height: 100px;
@@ -16,14 +24,14 @@
 
 *
 {
-    color: white;
+    color: var(--theme-text);
 
     font-family: 'Roboto', sans-serif;
 }
 
 body
 {
-    background-color: #231F20;
+    background-color: var(--theme-back);
 }
 
 button
@@ -38,12 +46,12 @@ button
     font-size: xx-large;
     font-style: bold;
 
-    background-color: #ec5020;
+    background-color: var(--theme-object);
 }
 
 button:hover
 {
-    background-color: #fa6d42;
+    background-color: var(--theme-highlight);
 }
 
 #reset
