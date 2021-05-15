@@ -47,6 +47,8 @@ function move(id)
     info['go'].innerHTML = charater + "'s Go";
 	
 	var pre = calculate();
+
+    resetPrediction();
 	
 	board[pre[0]][pre[1]][1].parentElement.classList.add('predict');
 }
@@ -142,6 +144,8 @@ function reset()
 
     tabloid.classList.remove('win');
     tabloid.classList.remove('lol');
+
+    resetPrediction();
 	
 	load();
 }
@@ -207,4 +211,15 @@ function calculate()
 	{
 		return [0, 2];
 	}
+}
+
+function resetPrediction()
+{
+    for (var x in board)
+    {
+        for (var y in board[x])
+        {
+            board[x][y][1].parentElement.classList.remove('predict');
+        }
+    }
 }
