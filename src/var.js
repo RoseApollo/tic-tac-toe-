@@ -62,6 +62,8 @@ function load()
     gamemode = 1;
 
     root = document.documentElement;
+	
+	info['go'].innerHTML = "X's Go";
 
     setup();
 }

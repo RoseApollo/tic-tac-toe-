@@ -1,25 +1,14 @@
 function move(id)
 {
-    if (board[ids[id][0]][ids[id][1]][0] != 0)
+	if (board[ids[id][0]][ids[id][1]][0] != 0)
     {
         return;
     }
     
-    var charater = "";
+    var charater = (ptm == 1) ? "X" : "O";
     var optm = ptm;
-
-    if (ptm == 1)
-    {
-        charater = "X";
-
-        ptm = 2;
-    }
-    else
-    {
-        charater = "O";
-
-        ptm = 1;
-    }
+	
+	ptm = (ptm == 1) ? 2 : 1;
 
     board[ids[id][0]][ids[id][1]][1].innerHTML = charater;
     board[ids[id][0]][ids[id][1]][0] = optm;
@@ -52,17 +41,14 @@ function move(id)
 
         return;
     }
-
-    if (ptm == 1)
-    {
-        charater = "X";
-    }
-    else
-    {
-        charater = "O";
-    }
+	
+	charater = (ptm == 1) ? "X" : "O";
 
     info['go'].innerHTML = charater + "'s Go";
+	
+	var pre = calculate();
+	
+	board[pre[0]][pre[1]][1].parentElement.classList.add('predict');
 }
 
 function win()
@@ -156,4 +142,69 @@ function reset()
 
     tabloid.classList.remove('win');
     tabloid.classList.remove('lol');
+	
+	load();
+}
+
+function calculate()
+{
+	var like = (ptm == 1) ? 2 : 1;
+	
+	for (var x = 0; x <3; x++)
+	{
+		if (board[x][0][0] == like && board[x][1][0] == like && board[x][2][0] == 0)
+		{
+			return [x, 2];
+		}
+		if (board[x][0][0] == like && board[x][1][0] == 0 && board[x][2][0] == like)
+		{
+			return [x, 1];
+		}
+		if (board[x][0][0] == 0 && board[x][1][0] == like && board[x][2][0] == like)
+		{
+			return [x, 0];
+		}
+	}
+	
+	for (var x = 0; x <3; x++)
+	{
+		if (board[0][x][0] == like && board[1][x][0] == like && board[2][x][0] == 0)
+		{
+			return [2, x];
+		}
+		if (board[0][x][0] == like && board[1][x][0] == 0 && board[2][x][0] == like)
+		{
+			return [1, x];
+		}
+		if (board[0][x][0] == 0 && board[1][x][0] == like && board[2][x][0] == like)
+		{
+			return [0, x];
+		}
+	}
+	
+	if (board[0][0][0] == like && board[1][1][0] == like && board[2][2][0] == 0)
+	{
+		return [2, 2];
+	}
+	if (board[0][0][0] == like && board[1][1][0] == 0 && board[2][2][0] == like)
+	{
+		return [1, 1];
+	}
+	if (board[0][0][0] == 0 && board[1][1][0] == like && board[2][2][0] == like)
+	{
+		return [0, 0];
+	}
+	
+	if (board[0][2][0] == like && board[1][1][0] == like && board[2][0][0] == 0)
+	{
+		return [2, 0];
+	}
+	if (board[0][2][0] == like && board[1][1][0] == 0 && board[2][0][0] == like)
+	{
+		return [1, 1];
+	}
+	if (board[0][2][0] == 0 && board[1][1][0] == like && board[2][0][0] == like)
+	{
+		return [0, 2];
+	}
 }

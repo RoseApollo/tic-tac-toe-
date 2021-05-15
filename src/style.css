@@ -16,6 +16,11 @@
     width: 100px;
 }
 
+#board
+{
+		margin-right: 16px;
+}
+
 .center
 {
     margin-left: auto;
@@ -72,4 +77,11 @@ button:hover
     border-radius: 12px;
 
     background-color: #b86868;
+}
+
+.predict
+{
+	border-radius: 12px;
+
+    background-color: #9DB17C;
 }
