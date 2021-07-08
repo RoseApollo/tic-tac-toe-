@@ -18,6 +18,23 @@ const themes =
 	'greyscale': new theme('#000000', '#555555', '#AAAAAA', '#FFFFFF', '#CCCCCC', '#333333', '#CCCCCC')
 }
 
+const themenames =
+[
+    'orange',
+    'greyscale'
+]
+
+function setupTheme()
+{
+    themenames.forEach(function(val)
+    {
+        var option = document.createElement("option");
+        option.text = val;
+
+        themesel.add(option);
+    });
+}
+
 function setTheme(name)
 {
     root.style.setProperty('--theme-back', themes[name].back);

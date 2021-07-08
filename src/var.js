@@ -6,6 +6,7 @@ var ptm;
 var tabloid;
 var gamemode;
 var root;
+var themesel
 
 function load()
 {
@@ -61,6 +62,8 @@ function load()
 
     gamemode = 1;
 
+    themesel = document.getElementById('theme-sel');
+
     root = document.documentElement;
 	
 	info['go'].innerHTML = "X's Go";
@@ -70,5 +73,7 @@ function load()
 
 function setup()
 {
+    setupTheme();
+
     setTheme('orange');
 }
