@@ -4,6 +4,9 @@
     --theme-object: #000000;
     --theme-highlight: #000000;
     --theme-text: #000000;
+	--theme-out-win: #000000;
+	--theme-out-loose: #000000;
+	--theme-out-predict: #000000;
 }
 
 #board tr
@@ -69,19 +72,19 @@ button:hover
 {
     border-radius: 12px;
 
-    background-color: #9DB17C;
+    background-color: var(--theme-out-win);
 }
 
 .lol
 {
     border-radius: 12px;
 
-    background-color: #b86868;
+    background-color: var(--theme-out-loose);
 }
 
 .predict
 {
 	border-radius: 12px;
 
-    background-color: #9DB17C;
+    background-color: var(--theme-out-predict);
 }

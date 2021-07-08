@@ -46,9 +46,9 @@ function move(id)
 
     info['go'].innerHTML = charater + "'s Go";
 	
-	var pre = calculate();
-
-    resetPrediction();
+	resetPredict();
+	
+	var pre = calculate(ptm);
 	
 	board[pre[0]][pre[1]][1].parentElement.classList.add('predict');
 }
@@ -141,18 +141,20 @@ function reset()
             board[x][y][1].innerHTML = " ";
         }
     }
+	
+	resetPredict();
 
     tabloid.classList.remove('win');
     tabloid.classList.remove('lol');
-
-    resetPrediction();
 	
 	load();
 }
 
-function calculate()
+function calculate(like)
 {
-	var like = (ptm == 1) ? 2 : 1;
+	const dislike = (like == 1) ? 2 : 1;
+	
+	//LIKE
 	
 	for (var x = 0; x <3; x++)
 	{
@@ -211,15 +213,124 @@ function calculate()
 	{
 		return [0, 2];
 	}
+	
+	//DISLIKE
+	
+	for (var x = 0; x <3; x++)
+	{
+		if (board[0][x][0] == dislike && board[1][x][0] == dislike && board[2][x][0] == 0)
+		{
+			return [2, x];
+		}
+		if (board[0][x][0] == dislike && board[1][x][0] == 0 && board[2][x][0] == dislike)
+		{
+			return [1, x];
+		}
+		if (board[0][x][0] == 0 && board[1][x][0] == dislike && board[2][x][0] == dislike)
+		{
+			return [0, x];
+		}
+	}
+	
+	for (var x = 0; x <3; x++)
+	{
+		if (board[x][0][0] == dislike && board[x][1][0] == dislike && board[x][2][0] == 0)
+		{
+			return [x, 2];
+		}
+		if (board[x][0][0] == dislike && board[x][1][0] == 0 && board[x][2][0] == dislike)
+		{
+			return [x, 1];
+		}
+		if (board[x][0][0] == 0 && board[x][1][0] == dislike && board[x][2][0] == dislike)
+		{
+			return [x, 0];
+		}
+	}
+	
+	if (board[0][0][0] == dislike && board[1][1][0] == dislike && board[2][2][0] == 0)
+	{
+		return [2, 2];
+	}
+	if (board[0][0][0] == dislike && board[1][1][0] == 0 && board[2][2][0] == dislike)
+	{
+		return [1, 1];
+	}
+	if (board[0][0][0] == 0 && board[1][1][0] == dislike && board[2][2][0] == dislike)
+	{
+		return [0, 0];
+	}
+	
+	if (board[0][2][0] == dislike && board[1][1][0] == dislike && board[2][0][0] == 0)
+	{
+		return [2, 0];
+	}
+	if (board[0][2][0] == dislike && board[1][1][0] == 0 && board[2][0][0] == dislike)
+	{
+		return [1, 1];
+	}
+	if (board[0][2][0] == 0 && board[1][1][0] == dislike && board[2][0][0] == dislike)
+	{
+		return [0, 2];
+	}
+	
+	//CENTER
+	
+	if (board[1][1][0] == 0)
+	{
+		return [1, 1];
+	}
+	
+	//CORNERS
+	
+	if (board[0][0][0] == 0)
+	{
+		return [0, 0];
+	}
+	if (board[0][2][0] == 0)
+	{
+		return [0, 2];
+	}
+	if (board[2][0][0] == 0)
+	{
+		return [2, 0];
+	}
+	if (board[2][2][0] == 0)
+	{
+		return [2, 2];
+	}
+	
+	//EDGES
+	
+	if (board[0][1][0] == 0)
+	{
+		return [0, 1];
+	}
+	if (board[2][1][0] == 0)
+	{
+		return [2, 1];
+	}
+	if (board[1][0][0] == 0)
+	{
+		return [1, 0];
+	}
+	if (board[1][2][0] == 0)
+	{
+		return [1, 2];
+	}
 }
 
-function resetPrediction()
+function resetPredict()
 {
-    for (var x in board)
-    {
-        for (var y in board[x])
-        {
-            board[x][y][1].parentElement.classList.remove('predict');
-        }
-    }
+	for (var x = 0; x <3; x++)
+	{
+		for (var y = 0; y <3; y++)
+		{
+			try
+			{
+				board[x][y][1].parentElement.classList.remove("predict");	
+			}
+			catch{}
+		}
+	}
 }
