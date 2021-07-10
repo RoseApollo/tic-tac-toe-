@@ -48,9 +48,12 @@ function move(id)
 	
 	resetPredict();
 	
-	var pre = calculate(ptm);
+	if (dopredict)
+	{
+		var pre = calculate(ptm);
 	
-	board[pre[0]][pre[1]][1].parentElement.classList.add('predict');
+		board[pre[0]][pre[1]][1].parentElement.classList.add('predict');
+	}
 }
 
 function win()

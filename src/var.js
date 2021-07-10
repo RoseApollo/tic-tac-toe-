@@ -6,7 +6,8 @@ var ptm;
 var tabloid;
 var gamemode;
 var root;
-var themesel
+var themesel;
+var dopredict;
 
 function load()
 {
@@ -65,6 +66,8 @@ function load()
     themesel = document.getElementById('theme-sel');
 
     root = document.documentElement;
+
+    dopredict = true;
 	
 	info['go'].innerHTML = "X's Go";
 
