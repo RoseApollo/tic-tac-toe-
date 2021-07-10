@@ -1,6 +1,14 @@
+// invert a playing charcter
+
+function invertPlayer(inp) { return (inp == 1) ? 2 : 1 }
+
+// given side to like, it will give a recomneded move
+
 function calculate(like)
 {
-	const dislike = (like == 1) ? 2 : 1;
+	// invert like to work out who to dislike
+
+	const dislike = invertPlayer(like);
 	
 	//LIKE
 	
