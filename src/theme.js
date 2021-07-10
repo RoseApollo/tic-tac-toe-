@@ -2,27 +2,33 @@ class theme
 {
     constructor(back, object, highlight, text, win, loose, pre)
     {
-        this.back = back;
-        this.object = object;
-        this.highlight = highlight;
-        this.text = text;
-		this.win = win;
-		this.loose = loose;
-		this.predict = pre;
+        this.back = back; // background
+        this.object = object; // button color
+        this.highlight = highlight; // when button is hovered
+        this.text = text; // text
+		this.win = win; // win background
+		this.loose = loose; // loose background
+		this.predict = pre; // prediction outline
     }
 }
 
+// theme definitions
+
 const themes = 
 {
-    'orange': new theme('#231F20', '#ec5020', '#fa6d42', '#ffffff', '#9DB17C', '#b86868', '#9DB17C'),
-	'greyscale': new theme('#000000', '#555555', '#AAAAAA', '#FFFFFF', '#CCCCCC', '#333333', '#CCCCCC')
+    'orange': new theme('#231F20', '#ec5020', '#fa6d42', '#ffffff', '#9DB17C', '#b86868', '#9DB17C'), // main theme
+	'greyscale': new theme('#000000', '#555555', '#AAAAAA', '#FFFFFF', '#CCCCCC', '#333333', '#CCCCCC') // test theme, but not too bad lol
 }
+
+// once theme has been added to themes, add it here so it is added to the onscreen picker
 
 const themenames =
 [
     'orange',
     'greyscale'
 ]
+
+// setup the onscreen theme selector
 
 function setupTheme()
 {
@@ -35,10 +41,14 @@ function setupTheme()
     });
 }
 
+// update scene from onscreen scene selector
+
 function updateTheme()
 {
     setTheme(themesel.options[themesel.selectedIndex].value);
 }
+
+// set scene data in CSS
 
 function setTheme(name)
 {
