@@ -190,3 +190,8 @@ function resetPredict()
 		}
 	}
 }
+
+function aiswitch()
+{
+	dopredict = !dopredict;
+}
