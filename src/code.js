@@ -1,10 +1,18 @@
+// called to handle player movements
+
+// provided with the id of the area of the board clicked: eg 21
+
 function move(id)
 {
+    // exit function if their is already something at the position clicked
+
 	if (board[ids[id][0]][ids[id][1]][0] != 0)
     {
         return;
     }
     
+    // what character will be placed their
+
     var charater = (ptm == 1) ? "X" : "O";
     var optm = ptm;
 	
@@ -12,6 +20,8 @@ function move(id)
 
     board[ids[id][0]][ids[id][1]][1].innerHTML = charater;
     board[ids[id][0]][ids[id][1]][0] = optm;
+
+    // check if someone has won, or if the game is over
 
     var winner = win();
 
@@ -55,6 +65,8 @@ function move(id)
 		board[pre[0]][pre[1]][1].parentElement.classList.add('predict');
 	}
 }
+
+// check if someone has won, or if the game is over
 
 function win()
 {
@@ -134,8 +146,12 @@ function win()
     return 3;
 }
 
+// reset the board ready for another game
+
 function reset()
 {
+    // loop through all positions on board and reset them
+    
     for (var x = 0; x <= 2; x++)
     {
         for (var y = 0; y <= 2; y++)
