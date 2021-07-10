@@ -1,3 +1,5 @@
+// initialize variables
+
 var board;
 var info;
 var score;
@@ -9,8 +11,12 @@ var root;
 var themesel;
 var dopredict;
 
+// called when all the resources for the page have been loaded
+
 function load()
 {
+    // asing values to variables
+
     board = 
     [
         [
@@ -73,6 +79,8 @@ function load()
 
     setup();
 }
+
+// runs functions to get ready for game
 
 function setup()
 {
