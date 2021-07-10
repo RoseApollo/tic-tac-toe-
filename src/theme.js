@@ -35,6 +35,11 @@ function setupTheme()
     });
 }
 
+function updateTheme()
+{
+    setTheme(themesel.options[themesel.selectedIndex].value);
+}
+
 function setTheme(name)
 {
     root.style.setProperty('--theme-back', themes[name].back);

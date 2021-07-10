@@ -68,6 +68,12 @@ button:hover
     width: 150px;
 }
 
+#theme-up
+{
+    height: 50px;
+    width: 150px;
+}
+
 .win
 {
     border-radius: 12px;
