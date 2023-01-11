@@ -10,6 +10,7 @@ var gamemode;
 var root;
 var themesel;
 var dopredict;
+var dopredictbutton;
 
 // called when all the resources for the page have been loaded
 
@@ -76,6 +77,8 @@ function load()
     dopredict = true;
 	
 	info['go'].innerHTML = "X's Go";
+
+    dopredictbutton = document.getElementById('ai');
 
     setup();
 }

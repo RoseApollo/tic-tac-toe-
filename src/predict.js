@@ -194,4 +194,18 @@ function resetPredict()
 function aiswitch()
 {
 	dopredict = !dopredict;
+
+	dopredictbutton.innerHTML = "AI: " + (dopredict ? "On" : "Off");
+
+	if (dopredict)
+	{
+		
+		var pre = calculate(ptm);
+	
+		board[pre[0]][pre[1]][1].parentElement.classList.add('predict');
+	}
+	else
+	{
+		resetPredict();
+	}
 }
